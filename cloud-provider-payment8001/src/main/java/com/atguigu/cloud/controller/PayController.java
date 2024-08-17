@@ -24,7 +24,7 @@ public class PayController {
     }
 
     @DeleteMapping(value = "/pay/delete/{id}")
-    public String delete(@PathVariable Integer id){
+    public String delete(@PathVariable("id") Integer id){
         Integer result = payService.delete(id);
         return "delete pay successfully, result: " + result;
     }
@@ -38,7 +38,7 @@ public class PayController {
     }
 
     @GetMapping(value = "/pay/get/{id}")
-    public Pay getById(@PathVariable Integer id){
+    public Pay getById(@PathVariable("id") Integer id){
         return payService.getById(id);
     }
 
