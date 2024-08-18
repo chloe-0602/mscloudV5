@@ -40,14 +40,14 @@ public class OrderController {
     }
 
     // delete not support
-    @GetMapping("/consumer/pay/del/{id}")
-    public ResultData delPayInfo(@PathVariable("id") Integer id){
-        return restTemplate.getForObject(PaymentSrv_URL + "/pay/del/" + id, ResultData.class, id);
-    }
-
-    // update not support
-    @GetMapping("/consumer/pay/update")
-    public ResultData updatePayInfo(PayDTO payDTO){
-        return restTemplate.postForObject(PaymentSrv_URL + "/pay/update", payDTO, ResultData.class);
-    }
+//    @GetMapping("/consumer/pay/del/{id}")
+//    public ResultData delPayInfo(@PathVariable("id") Integer id){
+//        return restTemplate.getForObject(PaymentSrv_URL + "/pay/del/" + id, ResultData.class, id);
+//    }
+//
+//    // update not support
+//    @GetMapping("/consumer/pay/update")
+//    public ResultData updatePayInfo(PayDTO payDTO){
+//        return restTemplate.postForObject(PaymentSrv_URL + "/pay/update", payDTO, ResultData.class);
+//    }
 }
