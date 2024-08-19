@@ -16,8 +16,8 @@ spring:
       client:
         config:
           default:
-            connectTimeout: 4000
-            readTimeout: 4000
+            connectTimeout: 2000
+            readTimeout: 2000
 #          cloud-payment-service:
 #            connectTimeout: 4000
 #            readTimeout: 4000
@@ -31,3 +31,12 @@ spring:
           mime-types: text/xml,application/xml,application/json
         response:
           enabled: true
+
+# feign日志以什么级别监控哪个接口
+logging:
+  level:
+    com:
+      atguigu:
+        cloud:
+          apis:
+            PayFeignApi: debug
