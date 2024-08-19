@@ -1,5 +1,6 @@
 package com.atguigu.cloud.controller;
 
+import cn.hutool.core.date.DateUtil;
 import com.atguigu.cloud.apis.PayFeignApi;
 import com.atguigu.cloud.entities.PayDTO;
 import com.atguigu.cloud.resp.ResultData;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
@@ -27,8 +29,16 @@ public class OrderController {
 
     @GetMapping("/feign/pay/get/{id}")
     public ResultData getPayInfo(@PathVariable("id") Integer id){
+        ResultData res = null;
+        try{
+            log.info("start time: {}", DateUtil.now());
+            res = payFeignApi.getPayInfo(id);
+        }catch (Exception e){
+            e.printStackTrace();
+            log.info("end time: {}", DateUtil.now());
+        }
         log.info("-------支付微服务远程调用，按照id查询订单支付流水信息");
-        return payFeignApi.getPayInfo(id);
+        return res;
     }
 
     @GetMapping("/feign/pay/mylb")
