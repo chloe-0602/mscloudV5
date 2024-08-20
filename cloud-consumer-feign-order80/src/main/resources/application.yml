@@ -126,13 +126,22 @@ spring:
 # spring.cloud.openfeign.circuitbreaker.group.enabled 请设置为false 新启线程和原来主线程脱离
 
 ####resilience4j ratelimiter 限流的例子
-resilience4j:
-  ratelimiter:
-    configs:
-      default:
-        limitForPeriod: 2 #在一次刷新周期内，允许执行的最大请求数
-        limitRefreshPeriod: 1s # 限流器每隔limitRefreshPeriod刷新一次，将允许处理的最大请求数量重置为limitForPeriod
-        timeout-duration: 1 # 线程等待权限的默认等待时间
-    instances:
-      cloud-payment-service:
-        baseConfig: default
+#resilience4j:
+#  ratelimiter:
+#    configs:
+#      default:
+#        limitForPeriod: 2 #在一次刷新周期内，允许执行的最大请求数
+#        limitRefreshPeriod: 1s # 限流器每隔limitRefreshPeriod刷新一次，将允许处理的最大请求数量重置为limitForPeriod
+#        timeout-duration: 1 # 线程等待权限的默认等待时间
+#    instances:
+#      cloud-payment-service:
+#        baseConfig: default
+
+# zipkin图形展现地址和采样率设置
+management:
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0 #采样率默认为0.1(0.1就是10次只能有一次被记录下来)，值越大收集越及时。
