@@ -23,7 +23,9 @@ public class PayCircuitController {
     @GetMapping(value = "/pay/bulkhead/{id}")
     public String myBulkhead(@PathVariable("id") Integer id)
     {
-        if(id == -4) throw new RuntimeException("----bulkhead id 不能-4");
+        if(id == -4) {
+            throw new RuntimeException("----bulkhead id 不能-4");
+        }
 
         if(id == 9999)
         {
