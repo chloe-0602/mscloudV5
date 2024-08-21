@@ -56,3 +56,4 @@ spring:
 #            - PrefixPath=/pay # http://localhost:9527/pay/gateway/filter
 #            - SetPath=/pay/gateway/{segment}  # {segment}表示占位符，你写abc也行但要上下一致
 #            - RedirectTo=302, http://www.baidu.com/ # 访问http://localhost:9527/pay/gateway/filter跳转到http://www.baidu.com/
+            - My=atguigu
