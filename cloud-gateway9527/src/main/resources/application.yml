@@ -27,7 +27,7 @@ spring:
 #            - Query=username, \d+  # 要有参数名username并且值还要是整数才能路由
 #            - RemoteAddr=192.168.50.1/24 # 外部访问我的IP限制，最大跨度不超过32，目前是1~24它们是 CIDR 表示法。
 #            - Method=GET # 请求方法
-            - My=diamond
+#            - My=diamond
 #            - name: My
 #              args:
 #                userType: diamond
@@ -55,4 +55,4 @@ spring:
 #            - RemoveResponseHeader=Content-Type # 将默认自带Content-Type回应属性删除
 #            - PrefixPath=/pay # http://localhost:9527/pay/gateway/filter
 #            - SetPath=/pay/gateway/{segment}  # {segment}表示占位符，你写abc也行但要上下一致
-            - RedirectTo=302, http://www.baidu.com/ # 访问http://localhost:9527/pay/gateway/filter跳转到http://www.baidu.com/
+#            - RedirectTo=302, http://www.baidu.com/ # 访问http://localhost:9527/pay/gateway/filter跳转到http://www.baidu.com/
