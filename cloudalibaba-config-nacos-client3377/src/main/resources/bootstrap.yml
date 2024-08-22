@@ -9,6 +9,8 @@ spring:
       config:
         server-addr: localhost:8848 #Nacos作为配置中心地址
         file-extension: yaml #指定yaml格式的配置
+        group: PROD_GROUP
+        namespace: bf7c7b6c-8679-4147-9618-d1142196a3a8
 
 # nacos端配置文件DataId的命名规则是：
 # ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file-extension}
