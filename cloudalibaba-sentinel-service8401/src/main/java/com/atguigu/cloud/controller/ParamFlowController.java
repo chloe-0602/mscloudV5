@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Slf4j
-public class HotLimitController {
+public class ParamFlowController {
 
 
     @GetMapping("/testHotKey")
