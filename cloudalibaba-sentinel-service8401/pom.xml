@@ -18,6 +18,11 @@
     </properties>
 
     <dependencies>
+        <!--SpringCloud ailibaba sentinel-datasource-nacos -->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+        </dependency>
         <!--SpringCloud alibaba sentinel -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
