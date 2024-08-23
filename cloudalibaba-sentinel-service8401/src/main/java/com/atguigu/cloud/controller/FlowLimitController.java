@@ -5,6 +5,8 @@ import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.TimeUnit;
+
 @RestController
 public class FlowLimitController
 {
@@ -45,6 +47,22 @@ public class FlowLimitController
         System.out.println(System.currentTimeMillis()+"      testE,排队等待");
         return "------testE";
     }
+
+    /**
+     * 新增熔断规则-慢调用比例
+     * 时间窗口内，慢调用数量>阈值
+     * @return
+     */
+    @GetMapping("/testF")
+    public String testF()
+    {
+        //暂停几秒钟线程
+        try { TimeUnit.SECONDS.sleep(1); } catch (InterruptedException e) { e.printStackTrace(); }
+        System.out.println("----测试:新增熔断规则-慢调用比例 ");
+        return "------testF 新增熔断规则-慢调用比例";
+    }
+
+
 
 }
 
