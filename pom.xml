@@ -21,6 +21,7 @@
         <module>cloudalibaba-consumer-nacos-order83</module>
         <module>cloudalibaba-config-nacos-client3377</module>
         <module>cloudalibaba-sentinel-service8401</module>
+        <module>cloudalibaba-sentinel-gateway9528</module>
     </modules>
 
     <properties>
@@ -37,10 +38,13 @@
         <fastjson2.version>2.0.40</fastjson2.version>
         <persistence-api.version>1.0.2</persistence-api.version>
         <spring.boot.test.version>3.1.5</spring.boot.test.version>
-<!--        <spring.boot.version>3.2.0</spring.boot.version>-->
-<!--        <spring.cloud.version>2023.0.0</spring.cloud.version>-->
-        <spring.boot.version>3.0.9</spring.boot.version>
-        <spring.cloud.version>2022.0.2</spring.cloud.version>
+        <spring.boot.version>3.2.0</spring.boot.version>
+        <spring.cloud.version>2023.0.0</spring.cloud.version>
+<!--        Openfeign 和Sentinel集成实现fallback服务降级：
+                          此处为了解决冲突问题，从而降低Springboot版本和SpringCloud版本
+                          -->
+<!--        <spring.boot.version>3.0.9</spring.boot.version>-->
+<!--        <spring.cloud.version>2022.0.2</spring.cloud.version>-->
         <spring.cloud.alibaba.version>2022.0.0.0-RC2</spring.cloud.alibaba.version>
         <micrometer-tracing.version>1.2.0</micrometer-tracing.version>
         <micrometer-observation.version>1.12.0</micrometer-observation.version>
