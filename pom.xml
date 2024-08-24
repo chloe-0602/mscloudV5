@@ -23,6 +23,7 @@
         <module>cloudalibaba-sentinel-service8401</module>
         <module>cloudalibaba-sentinel-gateway9528</module>
         <module>seata-order-service2001</module>
+        <module>seata-storage-service2002</module>
     </modules>
 
     <properties>

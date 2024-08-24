@@ -1,9 +1,9 @@
 server:
-  port: 2001
+  port: 2002
 
 spring:
   application:
-    name: seata-order-service
+    name: seata-storage-service
   cloud:
     nacos:
       discovery:
@@ -12,7 +12,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/seata_order?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3306/seata_storage?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
     username: root
     password: "000000"
 # ========================mybatis===================
@@ -21,7 +21,6 @@ mybatis:
   type-aliases-package: com.atguigu.cloud.entities
   configuration:
     map-underscore-to-camel-case: true
-
 # ========================seata===================
 seata:
   registry:
@@ -33,7 +32,7 @@ seata:
       application: seata-server
   tx-service-group: default_tx_group # 事务组，由它获得TC服务的集群名称
   service:
-    vgroup-mapping: # 点击源码分析
+    vgroup-mapping:
       default_tx_group: default # 事务组与TC服务集群的映射关系
   data-source-proxy-mode: AT
 

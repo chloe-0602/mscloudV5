@@ -32,14 +32,14 @@
 <!--        </table>-->
 
         <!--  seata_order -->
-        <table tableName="t_order" domainObjectName="Order">
-            <generatedKey column="id" sqlStatement="JDBC"/>
-        </table>
+<!--        <table tableName="t_order" domainObjectName="Order">-->
+<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
 
         <!--seata_storage-->
-        <!--<table tableName="t_storage" domainObjectName="Storage">
+        <table tableName="t_storage" domainObjectName="Storage">
             <generatedKey column="id" sqlStatement="JDBC"/>
-        </table>-->
+        </table>
 
         <!--seata_account-->
         <!--<table tableName="t_account" domainObjectName="Account">
