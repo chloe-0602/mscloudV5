@@ -37,14 +37,14 @@
 <!--        </table>-->
 
         <!--seata_storage-->
-        <table tableName="t_storage" domainObjectName="Storage">
-            <generatedKey column="id" sqlStatement="JDBC"/>
-        </table>
+<!--        <table tableName="t_storage" domainObjectName="Storage">-->
+<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
 
         <!--seata_account-->
-        <!--<table tableName="t_account" domainObjectName="Account">
+        <table tableName="t_account" domainObjectName="Account">
             <generatedKey column="id" sqlStatement="JDBC"/>
-        </table>-->
+        </table>
     </context>
 </generatorConfiguration>
 
