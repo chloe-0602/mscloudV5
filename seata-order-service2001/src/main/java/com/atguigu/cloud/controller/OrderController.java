@@ -5,6 +5,7 @@ import com.atguigu.cloud.resp.ResultData;
 import com.atguigu.cloud.service.OrderService;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
